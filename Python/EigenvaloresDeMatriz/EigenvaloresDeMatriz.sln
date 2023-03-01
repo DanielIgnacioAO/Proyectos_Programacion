@@ -1,0 +1,23 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.31105.61
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{888888A0-9F3D-457C-B088-3A5042F75D52}") = "EigenvaloresDeMatriz", "EigenvaloresDeMatriz.pyproj", "{37B9E4C3-C8D5-451D-86C3-12D64D4F5B83}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{37B9E4C3-C8D5-451D-86C3-12D64D4F5B83}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{37B9E4C3-C8D5-451D-86C3-12D64D4F5B83}.Release|Any CPU.ActiveCfg = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {C514A5AB-BD35-4D6F-B933-18FDAD747572}
+	EndGlobalSection
+EndGlobal
