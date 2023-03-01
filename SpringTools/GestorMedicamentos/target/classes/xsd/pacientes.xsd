@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://com.medicamento" targetNamespace="http://com.medicamento" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="pacientes">
+		<xs:annotation>
+			<xs:documentation>Describe la Estructura de las entidades de negocio para la gestion de un taller mecanico</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="Paciente">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="Nombre">
+								<xs:complexType>
+									<xs:sequence>
+										<xs:element name="Nombres">
+											<xs:simpleType>
+												<xs:restriction base="xs:string"></xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="A_Paterno">
+											<xs:simpleType>
+												<xs:restriction base="xs:string"></xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+										<xs:element name="A_Materno">
+											<xs:simpleType>
+												<xs:restriction base="xs:string"></xs:restriction>
+											</xs:simpleType>
+										</xs:element>
+									</xs:sequence>
+								</xs:complexType>
+							</xs:element>
+							<xs:element name="Telefono">
+								<xs:simpleType>
+									<xs:restriction base="xs:int">
+										<xs:pattern value="^(\(\+?\d{2,3}\)[\*|\s|\-|\.]?(([\d][\*|\s|\-|\.]?){6})(([\d][\s|\-|\.]?){2})?|(\+?[\d][\s|\-|\.]?){8}(([\d][\s|\-|\.]?){2}(([\d][\s|\-|\.]?){2})?)?)$"></xs:pattern>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Correo">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="^[^@]+@[^@]+\.[a-zA-Z]{2,}$"></xs:pattern>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Direccion">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"></xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Expediente">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"></xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="Alergias">
+								<xs:simpleType>
+									<xs:restriction base="xs:string"></xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="IdPaciente">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="^([A-Z]{3}[0-9]{4})"></xs:pattern>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

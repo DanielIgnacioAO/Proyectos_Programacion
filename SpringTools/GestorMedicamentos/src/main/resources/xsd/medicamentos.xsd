@@ -1,0 +1,101 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://com.medicamento" targetNamespace="http://com.medicamento" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="medicamento">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="xs:string"></xs:element>
+				<xs:element name="marca" type="xs:string"></xs:element>
+				<xs:element name="contenido" type="xs:string"></xs:element>
+				<xs:element name="fecha_caducidad">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="dia">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="^(0?[1-9]|[12][0-9]|3[01])$"></xs:pattern>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="mes">
+								<xs:simpleType>
+									<xs:restriction base ="xs:string">
+										<xs:pattern value="^(0?[1-9]|1[1-2])$"></xs:pattern>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="anio">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="^(\d{4})$"></xs:pattern>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="nombreMedicamentoEliminar">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="xs:string"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="nombreMedicamentoConsulta">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="xs:string"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+	<xs:element name="actualizarMedicamento">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="xs:string"></xs:element>
+				<xs:element name="marca" type="xs:string"></xs:element>
+				<xs:element name="contenido" type="xs:string"></xs:element>
+				<xs:element name="fecha_caducidad">
+					<xs:complexType>
+						<xs:sequence>
+							<xs:element name="dia">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="^(0?[1-9]|[12][0-9]|3[01])$"></xs:pattern>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="mes">
+								<xs:simpleType>
+									<xs:restriction base ="xs:string">
+										<xs:pattern value="^(0?[1-9]|1[1-2])$"></xs:pattern>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+							<xs:element name="anio">
+								<xs:simpleType>
+									<xs:restriction base="xs:string">
+										<xs:pattern value="^(\d{4})$"></xs:pattern>
+									</xs:restriction>
+								</xs:simpleType>
+							</xs:element>
+						</xs:sequence>
+					</xs:complexType>
+				</xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+
+	<xs:element name="apartarMedicamento">
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="xs:string"></xs:element>
+				<xs:element name="marca" type="xs:string"></xs:element>
+				<xs:element name="cantidad" type="xs:int"></xs:element>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>	
+	
+	
+</xs:schema>

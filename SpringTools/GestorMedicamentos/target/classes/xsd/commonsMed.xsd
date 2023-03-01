@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://com.medicamento" targetNamespace="http://com.medicamento" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="ack">
+		<xs:annotation>
+			<xs:documentation>Describe la estructuras comunes para la gestión de un gestor de medicamentos.</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="code" type="xs:int"/>
+				<xs:element name="description" type="xs:string"/>
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>

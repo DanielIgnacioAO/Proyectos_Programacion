@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<bindings version="2.1" xmlns="http://java.sun.com/xml/ns/jaxb">
+  <!--
+
+Este archivo ha sido generado por la arquitectura JavaTM para la implantación de la referencia de enlace (JAXB) XML v2.3.2 
+Visite <a href="https://javaee.github.io/jaxb-v2/">https://javaee.github.io/jaxb-v2/</a> 
+Todas las modificaciones realizadas en este archivo se perderán si se vuelve a compilar el esquema de origen. 
+Generado el: 2022.10.18 a las 08:12:06 AM CDT 
+
+  -->
+  <bindings scd="x-schema::tns" xmlns:tns="http://com.medicamento">
+    <schemaBindings map="false">
+      <package name="com.itq.gestorMedicamentos.dto"/>
+    </schemaBindings>
+    <bindings scd="tns:medicamento">
+      <class ref="com.itq.gestorMedicamentos.dto.Medicamento"/>
+    </bindings>
+    <bindings scd="tns:actualizarMedicamento">
+      <class ref="com.itq.gestorMedicamentos.dto.ActualizarMedicamento"/>
+    </bindings>
+    <bindings scd="tns:pacientes">
+      <class ref="com.itq.gestorMedicamentos.dto.Pacientes"/>
+    </bindings>
+    <bindings scd="tns:ack">
+      <class ref="com.itq.gestorMedicamentos.dto.Ack"/>
+    </bindings>
+    <bindings scd="tns:nombreMedicamentoEliminar">
+      <class ref="com.itq.gestorMedicamentos.dto.NombreMedicamentoEliminar"/>
+    </bindings>
+    <bindings scd="tns:nombreMedicamentoConsulta">
+      <class ref="com.itq.gestorMedicamentos.dto.NombreMedicamentoConsulta"/>
+    </bindings>
+    <bindings scd="tns:apartarMedicamento">
+      <class ref="com.itq.gestorMedicamentos.dto.ApartarMedicamento"/>
+    </bindings>
+    <bindings scd="tns:medico">
+      <class ref="com.itq.gestorMedicamentos.dto.Medico"/>
+    </bindings>
+  </bindings>
+</bindings>
+

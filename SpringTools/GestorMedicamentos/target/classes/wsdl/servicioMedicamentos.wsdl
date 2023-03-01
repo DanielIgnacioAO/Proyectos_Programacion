@@ -1,0 +1,114 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:tns="http://com.medicamento" targetNamespace="http://com.medicamento">
+
+	<wsdl:types>
+		<xs:schema targetNamespace="http://com.medicamento" elementFormDefault="qualified">
+			<xs:include schemaLocation="../xsd/medicamentos.xsd"/>
+			<xs:include schemaLocation="../xsd/pacientes.xsd"/>
+			<xs:include schemaLocation="../xsd/medico.xsd"/>
+			<xs:include schemaLocation="../xsd/commonsMed.xsd"/>
+		</xs:schema>
+	</wsdl:types>
+	
+	<wsdl:message name="medicamentoRequest">
+		<wsdl:part name="parameter" element="tns:medicamento"/>
+	</wsdl:message>
+	<wsdl:message name="nombreMedicamentoEliminarRequest">
+		<wsdl:part name="parameter" element="tns:nombreMedicamentoEliminar"/>
+	</wsdl:message>
+	<wsdl:message name="nombreMedicamentoConsultaRequest">
+		<wsdl:part name="parameter" element="tns:nombreMedicamentoConsulta"/>
+	</wsdl:message>
+	<wsdl:message name="actualizarMedicamentoRequest">
+		<wsdl:part name="parameter" element="tns:actualizarMedicamento"/>
+	</wsdl:message>
+	<wsdl:message name="apartarMedicamentoRequest">
+		<wsdl:part name="parameter" element="tns:apartarMedicamento"/>
+	</wsdl:message>
+	
+	
+	<wsdl:portType name="MedicamentoPortType">
+		<wsdl:operation name="insertMedicamentoOperation">
+			<wsdl:input message="tns:medicamentoRequest"/>
+			<wsdl:output message="tns:ackResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="updateMedicamentoOperation">
+			<wsdl:input message="tns:actualizarMedicamentoRequest"/>
+			<wsdl:output message="tns:ackResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="deleteMedicamentoOperation">
+			<wsdl:input message="tns:nombreMedicamentoEliminarRequest"/>
+			<wsdl:output message="tns:ackResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="readMedicamentoOperation">
+			<wsdl:input message="tns:nombreMedicamentoConsultaRequest"/>
+			<wsdl:output message="tns:ackResponse"/>
+		</wsdl:operation>
+		<wsdl:operation name="separateMedicamentoOperation">
+			<wsdl:input message="tns:apartarMedicamentoRequest"/>
+			<wsdl:output message="tns:ackResponse"/>
+		</wsdl:operation>
+	</wsdl:portType>
+	
+	<wsdl:binding name="MedicamentoBinding" type="tns:MedicamentoPortType">
+		<soap:binding style="document" transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="insertMedicamentoOperation">
+			<soap:operation soapAction="urn:#NewOperation"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="updateMedicamentoOperation">
+			<soap:operation soapAction="urn:#NewOperation"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="deleteMedicamentoOperation">
+			<soap:operation soapAction="urn:#NewOperation"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="readMedicamentoOperation">
+			<soap:operation soapAction="urn:#NewOperation"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		<wsdl:operation name="separateMedicamentoOperation">
+			<soap:operation soapAction="urn:#NewOperation"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+		
+		
+	</wsdl:binding>
+	
+	<wsdl:service name="MedicamentoService">
+		<wsdl:port name="MedicamentoPort" binding="tns:MedicamentoBinding">
+			<soap:address location="No target address"/>
+		</wsdl:port>
+	</wsdl:service>
+	
+</wsdl:definitions>

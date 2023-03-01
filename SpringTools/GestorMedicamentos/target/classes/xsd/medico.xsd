@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema" xmlns:tns1="http://com.medicamento" targetNamespace="http://com.medicamento" elementFormDefault="qualified" attributeFormDefault="unqualified">
+	<xs:element name="medico">
+		<xs:annotation>
+			<xs:documentation>Entidad medico</xs:documentation>
+		</xs:annotation>
+		<xs:complexType>
+			<xs:sequence>
+				<xs:element name="nombre" type="xs:string"></xs:element>
+				<xs:element name="usuario" type="xs:string"></xs:element>
+				<xs:element name="contraseña">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:pattern value="[A-Z a-z 0-9]{10}"></xs:pattern>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+				<xs:element name="consulorio" type="xs:int"></xs:element>	
+				<xs:element name="marca">
+					<xs:simpleType>
+						<xs:restriction base="xs:string">
+							<xs:enumeration value="Anestesiologia"/>
+							<xs:enumeration value="Patologia"/>
+							<xs:enumeration value="Cardiologia"/>
+							<xs:enumeration value="Pediatria"/>
+							<xs:enumeration value="Dermatologia"/>
+							<xs:enumeration value="Gastroenterología"/>
+						</xs:restriction>
+					</xs:simpleType>
+				</xs:element>
+							
+			</xs:sequence>
+		</xs:complexType>
+	</xs:element>
+</xs:schema>
