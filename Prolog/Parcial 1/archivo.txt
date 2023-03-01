@@ -1,0 +1,4 @@
+"hola daniel".
+"comer".
+[c,o,r,r,e,r].
+[matar,mato].
