@@ -1,0 +1,50 @@
+1
+SELECT A.cve_art
+  FROM ARTICULOS A, ART_PROV P
+ WHERE A.cve_art = P.cve_art
+   AND P.cve_prov = 'P105';
+
+SELECT cve_art
+  FROM COMPRAS
+ WHERE cve_prov = 'P105';
+--------------------------------
+2
+SELECT C.cve_cliente, C.razon_social, C.direccion
+  FROM CLIENTES C, VENTAS V
+ WHERE V.cve_cliente = C.cve_cliente
+   AND V.cve_art = 'ART029';
+--------------------------------
+3
+SELECT C.cve_cliente, C.razon_social, C.ciudad
+  FROM CLIENTES C, PROVEEDORES P
+ WHERE C.ciudad = P.ciudad
+   AND P.cve_prov = 'Prov015';
+--------------------------------
+4
+SELECT P.cve_prov, P.razon_social, P.direccion
+  FROM PROVEEDORES P, COMPRAS C
+ WHERE P.cve_prov = C.cve_prov
+   AND C.cve_art = 'ART050';
+--------------------------------
+5
+SELECT P.cve_prov, P.razon_social, AP.cve_art, AP.tiempo_entrega, AP.costo 
+  FROM PROVEEDORES P, ART_PROV AP
+ WHERE P.cve_prov = AP.cve_prov
+ ORDER BY AP.cve_prov, AP.cve_art, AP.tiempo_entrega;
+--------------------------------
+6
+SELECT DISTINCT A.cve_art, A.descrip, A.existencia
+  FROM ARTICULOS A, VENTAS V
+ WHERE A.cve_art = V.cve_art;
+--------------------------------
+7
+SELECT COUNT()
+--------------------------------
+
+--------------------------------
+SELECT department_id, job_id, COUNT(*) AS "Total"
+FROM employees
+GROUP BY department_id, job_id
+HAVING "Total" = (SELECT MAX(COUNT(*))
+                    FROM employees
+                    GROUP BY department_id, job_id)

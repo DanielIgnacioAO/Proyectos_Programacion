@@ -1,0 +1,9 @@
+capital hidalgo pachuca
+precio dolar 20.35
+precio euro 24.50
+presidente mexico amlo
+gobernador queretaro dominguez
+aceleracion gravedad 9.81
+frontera mexico usa
+frontera mexico guatemala
+frontera mexico belize
