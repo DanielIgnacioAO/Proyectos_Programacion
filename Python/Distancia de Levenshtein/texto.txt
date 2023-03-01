@@ -1,0 +1,92 @@
+1
+spool C:\Users\Daniel\Documents\practica7_Arellano_Ochoa_Daniel_Ignacio.txt
+-----------------
+2
+SELECT first_name||' '||last_name "Empleado", TO_CHAR(hire_date,'DD"/"MM"/"YYYY') "Fecha de contratación"
+  FROM EMPLOYEES
+ WHERE department_id = (SELECT department_id
+                          FROM EMPLOYEES
+                         WHERE last_name = 'Jones')
+   AND last_name <> 'Jones';
+-----------------
+3
+SELECT employee_id "No. de Emp.", first_name||' '||last_name "Nombre"
+  FROM EMPLOYEES 
+ WHERE salary > (SELECT AVG(salary)
+                   FROM EMPLOYEES)
+ ORDER BY salary DESC;
+-----------------
+4
+SELECT employee_id "No. de Emp.", first_name||' '||last_name "Nombre"
+  FROM EMPLOYEES
+ WHERE department_id IN (SELECT department_id
+                           FROM EMPLOYEES
+                          WHERE LOWER(first_name) LIKE '%m%');
+-----------------
+5
+SELECT E.first_name||' '||E.last_name "Empleado", J.job_title "Puesto"
+  FROM EMPLOYEES E, JOBS J, DEPARTMENTS D, LOCATIONS L
+ WHERE L.city = 'Seattle'
+   AND E.job_id = J.job_id
+   AND E.department_id = D.department_id
+   AND D.location_id = L.location_id;
+
+-----------------
+6
+SELECT E.first_name||' '||E.last_name "Empleado", J.job_title "Puesto", D.department_name "Departmento"
+  FROM EMPLOYEES E, JOBS J, DEPARTMENTS D, LOCATIONS L
+ WHERE L.city = 'Seattle'
+   AND E.job_id = J.job_id
+   AND E.department_id = D.department_id
+   AND D.location_id = L.location_id;
+-----------------
+7
+SELECT employee_id "No. de Emp.", first_name||' '||last_name "Nombre"
+  FROM EMPLOYEES
+ WHERE employee_id IN (SELECT manager_id
+                         FROM EMPLOYEES);
+-----------------
+8
+SELECT first_name||' '||last_name "Nombre", salary "Salario"
+  FROM EMPLOYEES
+ WHERE manager_id = (SELECT employee_id 
+                       FROM EMPLOYEES
+                      WHERE first_name = 'Steven'
+                        AND last_name = 'King');
+-----------------
+9
+SELECT E.department_id "Departmento", E.first_name||' '||E.last_name "Nombre", J.job_title "Puesto"
+  FROM EMPLOYEES E, JOBS J
+ WHERE E.job_id = J.job_id
+   AND E.department_id = (SELECT department_id
+                            FROM DEPARTMENTS
+                           WHERE department_name = 'Sales');
+-----------------
+10
+SELECT employee_id "No. de Emp.", first_name||' '||last_name "Nombre", salary "Salario"
+  FROM EMPLOYEES
+ WHERE (department_id, salary) IN (SELECT department_id, salary
+                                     FROM EMPLOYEES
+                                    WHERE commission_pct > 0);
+-----------------
+11
+SELECT E.first_name||' '||E.last_name "Empleado", D.department_name "Departmento", E.salary "Salario"
+  FROM EMPLOYEES E, DEPARTMENTS D
+ WHERE E.department_id = D.department_id
+   AND (E.salary, NVL(E.commission_pct,0)) IN (SELECT E.salary, NVL(E.commission_pct,0)
+                                                 FROM EMPLOYEES E, DEPARTMENTS D, LOCATIONS L
+                                                WHERE L.city = 'Seattle'
+                                                  AND E.department_id = D.department_id
+                                                  AND D.location_id = L.location_id);
+
+-----------------
+12
+SELECT first_name||' '||last_name "Empleado", TO_CHAR(hire_date,'DD"/"MM"/"YYYY') "Fecha de contratación", salary "Salario"
+  FROM EMPLOYEES
+ WHERE first_name <> 'Kimberely'
+   AND last_name <> 'Grant'
+   AND (salary,NVL(commission_pct,0)) IN (SELECT salary, commission_pct
+                                            FROM EMPLOYEES
+                                           WHERE first_name = 'Kimberely'
+                                             AND last_name = 'Grant');
+  

@@ -1,0 +1,9 @@
+EMPLEADOS
+(nombre_emp, calle, ciudad)
+
+TRABAJAN 
+(nombre_emp, nombre_cia, salario, 
+puesto, categoría)
+
+COMPAÑIAS
+(nombre_cia, ciudad)
