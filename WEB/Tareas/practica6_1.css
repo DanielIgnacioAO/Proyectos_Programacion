@@ -1,0 +1,71 @@
+/*Estilos generales de la página web*/
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+
+body{
+    font-family: 'Impact';
+}
+
+.container{
+    width:90%;
+    height: 300px;
+    outline: 8px solid;
+    margin: 10px auto;
+
+    display: grid;
+    grid-template-rows: 1fr 1fr 1fr;
+    column-gap: 1em;
+    row-gap: 1em;
+}
+.container2{
+    width:100%;
+    height: 100%;
+   
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    column-gap: 1em;
+    row-gap: 1em;
+}
+
+.bloque{
+    color: white;
+    font-size: 2em;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.menu{
+    background: orange;
+}
+
+.b1{
+    background: green;
+}
+
+.b2{
+    background: red;
+}
+
+.b3{
+    background: rgba(243, 210, 21, 0.911);
+}
+
+.b4{
+    background: rgb(239, 61, 255);
+}
+
+.footer{
+    background: darkorange;
+}
+
+
+.header {
+    font-size: 50px;
+    text-align:center;
+    padding:20px 0;
+}
+

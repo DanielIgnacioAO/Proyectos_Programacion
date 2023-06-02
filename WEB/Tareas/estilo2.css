@@ -1,0 +1,46 @@
+/*Estilo generales de la pagina web*/
+body{
+    /*background-image:url("./img/anime.png");*/
+    background-color: rgb(97, 97, 97);
+}
+p{
+    margin:200px;
+
+    border: 25px inset;
+    border-color: yellow;
+
+    padding: 50px;
+
+    text-align: center;
+    color: black;
+    background-color: rgb(58, 80, 220);
+}
+nar{
+    margin: 0px;
+    margin-top: 100px;
+    border: 5px dotted;
+    border-color: black;
+    padding: 100px;
+    background-color: orange;
+}
+ama{
+    margin: 0px;
+    border: 1px solid;
+    border-color: black;
+    padding: 75px;
+    background-color: yellow;
+}
+ver{
+    margin: 0px;
+    border: 1px solid;
+    border-color: black;
+    padding: 50px;
+    background-color: green;
+}
+azu{
+    margin: 0px;
+    border: 1px solid;
+    border-color: black;
+    padding: 25px;
+    background-color: blue;
+}

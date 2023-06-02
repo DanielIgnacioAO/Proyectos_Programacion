@@ -1,0 +1,334 @@
+/*Estilos generales de la página web*/
+/*
+rgb(112,59,68) CAFE 
+rgb(152,45,83) VINO
+rgb(216,138,159) ROSA
+rgb(248,237,213) CREMA
+*/
+@font-face {
+    font-family: myFirstFont;
+    src:url("./fonts/Blacknorthdemo-mLE25.otf");
+}
+
+@font-face {
+    font-family: mySecondFont;
+    src:url("./fonts/UrbaneleganceBolditalic-y4E3.ttf");
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    width: auto;
+    height: auto;
+    font-family: 'Lexend Deca', sans-serif;
+    font-size: 50em;
+
+    --pink-color: rgb(216,138,159);
+    --vine-color: rgb(152,45,83);
+    --dark-brown-color: rgb(112,59,68);
+    --creme-color:rgb(248,237,213);
+    
+}
+img{
+    object-fit: cover;
+}
+em{
+    font-size: 10px;
+}
+p{
+    font-size: 1.5em;
+}
+header img{
+    height: 3em;
+    width: 3em;
+}
+.card{
+    filter: brightness(90%);
+}
+.card:hover{
+    filter: brightness(100%);
+    cursor: pointer;
+    animation: escalar 1s infinite alternate-reverse;
+}
+@keyframes escalar{
+    to{
+        transform: scale(1);
+    }from{
+        transform: scale(1.05);
+    }
+}
+.Linea{
+    height: 8.5em;
+    background-color: var(--dark-brown-color);
+}
+.Titu{
+    background-color: var(--creme-color);
+    color: var(--dark-brown-color);
+    font-size: 2em;
+    text-align: center; 
+    margin: 1em;
+}
+.UP{
+    background-color: var(--creme-color);
+    color: white;
+
+    margin: 0;
+    padding: 2em;
+
+    align-items: stretch;
+    align-content: center;
+    text-align: center;
+}
+.Bienvenida{
+    background-color: var(--vine-color);
+    font-size: 2em;
+    font-family: myFirstFont;
+}
+.Eslogan{
+    background-color: var(--vine-color);
+    font-size: 1.5em;
+    font-family: mySecondFont;
+}
+.carousel-item .card{
+    background-color: var(--dark-brown-color);
+    color: white;
+}
+.Principal{
+    height: auto;
+    width: auto;
+    margin: 0;
+    border: 0;
+    border-style: solid;
+    padding: 2em;
+    
+    gap: 100em;
+
+    background-color: var(--creme-color);
+    border-color: var(--vine-color);    
+}
+.Principal a{
+    text-decoration: none;
+    color: inherit;
+}
+.Principal .card{
+    background-color: var(--pink-color);
+}
+.Principal .card-title{
+    color: var(--creme-color);
+    font-weight: bold;
+    text-align: center;
+    -webkit-text-stroke: 0.5px var(--dark-brown-color);
+}
+footer{
+    margin: 0em;
+    border:0em;
+    padding:0em;
+
+    background-color: var(--dark-brown-color);
+}
+footer .card{
+    background-color: var(--creme-color);
+    color: black;
+}
+footer .Linea{
+    height: 11.5em;
+    background-color: var(--dark-brown-color);
+}
+/*WhatsApp**********************************************************************************************/
+.whatsapp {
+    position:fixed;
+    width:80px;
+    height:80px;
+    bottom:40px;
+    right:40px;
+    background-color:transparent;
+    color:#FFF;
+    border-radius:50px;
+    text-align:center;
+    font-size:50px;
+    z-index: 10;
+    content: url("./img/WA_pink.png");
+}
+/*Maps**********************************************************************************************/
+.map-responsive{
+    overflow:hidden;
+    padding-bottom:20%;
+    position:relative;
+    height: 0;
+}
+.map-responsive iframe{
+    left:0;
+    top:0;
+    height:100%;
+    width:100%;
+    position:absolute;
+}
+/*Menu**********************************************************************************************/
+html {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    position: -webkit-sticky;
+    position: sticky;
+    background: rgb(216,138,159,0.7);
+    width: 100%;
+}
+
+.header>span {
+    color: white;
+    display: inline-block;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    letter-spacing: 0.5em;
+    margin: 0.25em 0 0.25em 1em;
+    font-size: 3em;
+}
+
+#menu-button-check {
+    display: none;
+}
+
+label[for=menu-button-check]:nth-of-type(1) {
+    display: none;
+}
+
+.menu a {
+    font-size: 0.8em;
+    color: inherit;
+    text-decoration: none;
+}
+
+.menu li:hover{/*animacion*/
+    cursor: pointer;
+    transform: scale(1.5);
+    font-weight: bold;
+}
+
+@media (min-width: 768px) {
+    html {
+        font-size: 1vw;
+    }
+
+    .header {
+        box-sizing: border-box;
+        width: 100%;
+        padding: 0 10% 0 5%;/*arriba,derecha,abajo,izquierda*/
+    }
+
+    .menu {
+        display: inline-block;
+        width: 80%;
+    }
+
+    .menu ul {
+        width: 100%;
+        height: 100%;
+        text-align: center;
+        color: white;
+    }
+
+    .menu li {
+        display: inline-block;
+        font-size: 1.5em;
+        margin: 0 3em 0 0;/*Separacion entre elementos del menu*/
+    }
+}
+
+@media (min-width: 768px) and (max-width:1023px) {
+    html {
+        font-size: 1.5vw;
+    }
+
+    .header {
+        width: 100%;
+        padding: 0;
+    }
+
+    .menu {
+        width: 95%;
+    }
+}
+
+@media (max-width: 767px) {
+
+    html {
+        font-size: 2.5vw;
+    }
+
+    .header>span {
+        width: 100%;
+        text-align: center;
+    }
+
+    label[for=menu-button-check]:nth-of-type(1) {
+        position: absolute;
+        top: 0.25em;
+        color: white;
+        left: 0.5em;
+        z-index: 1000;
+        font-size: 3em;
+        font-family: 'Times New Roman', Times, serif;
+        font-weight: bold;
+        display: inline-block;
+    }
+
+    label[for=menu-button-check]:nth-of-type(1):hover {
+        cursor: pointer;
+    }
+
+    #menu-button-check:checked~.menu {
+        animation: show-menu linear 0.1s;
+        right: 0;
+    }
+
+    #menu-button-check:checked~label[for=menu-button-check]:nth-of-type(1) {
+        color: white;
+    }
+
+    .menu {
+        display: flex;
+        animation: hide-menu linear 0.1s;
+        width: 100%;
+        height: 100%;
+        right: -100%;
+        top: 0;
+        position: fixed;
+        background: rgba(0, 0, 0, 0.95);
+        align-items: center;
+        justify-content: center;
+        z-index: 999;
+    }
+
+    .menu li {
+        font-size: 1.5em;
+        color: white;
+        margin: 1em 0;
+        list-style: none;
+    }
+
+    @keyframes show-menu {
+        from {
+            right: -100%;
+            opacity: 0;
+        }
+
+        to {
+            right: 0;
+            opacity: 1;
+        }
+    }
+
+    @keyframes hide-menu {
+        from {
+            right: 0;
+            opacity: 1;
+        }
+
+        to {
+            right: -100%;
+            opacity: 0;
+        }
+    }
+}

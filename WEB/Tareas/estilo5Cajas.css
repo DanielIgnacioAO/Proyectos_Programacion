@@ -1,0 +1,55 @@
+/*Estilo generales de la pagina web*/
+body{
+    background-color: white;
+}
+.cajaN{ 
+    font-family: sans-serif; 
+    font-size: 18px; 
+    font-weight: 400; 
+    color: #ffffff; 
+    background:orange; 
+    width: 100%;
+}
+.cajaG{ 
+    font-family: sans-serif; 
+    font-size: 18px; 
+    font-weight: 100; 
+    color: black; 
+    background:rgb(89, 88, 88,0.3); 
+    width: 48%;
+    height: 100px;
+    margin: 1%;
+    padding: 0%;
+}
+.cajaGCentro{ 
+    font-family: sans-serif; 
+    font-size: 18px; 
+    font-weight: 100; 
+    color: black; 
+    background:rgb(89, 88, 88,0.3); 
+    width: 98%;
+    height: 100px;
+    margin: 1%;
+    padding: 0%;
+}
+#izq{
+    font-family: sans-serif; 
+    font-size: 18px; 
+    font-weight: 100; 
+    color: black; 
+    text-align: left;
+}
+#der{
+    font-family: sans-serif; 
+    font-size: 18px; 
+    font-weight: 100; 
+    color: black; 
+    text-align: right;
+}
+#centro{
+    font-family: sans-serif; 
+    font-size: 18px; 
+    font-weight: 100; 
+    color: black; 
+    text-align: center;
+}

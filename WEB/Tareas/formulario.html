@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Formularios de registro - Mi Web</title>
+</head>
+<body>
+
+<h1><center>Formulario 1</center></h1>
+<ul>
+    <li>
+        <p>
+            Nombre: <input type="text" name="nombre" maxlength="50"/>
+        </p>
+    </li>
+    <li>
+        <p>
+            Apellidos: <input type="text" name="apellidos" maxlength="50"/>
+        </p>
+    </li>
+    <li>
+        <p>
+            Edad: <input type="text" name="edad" maxlength="50"/>
+        </p>
+    </li>
+    <li>
+        Selecciona los vehiculos que tengas:
+    </li>
+    <p>
+        <input type="checkbox" name="condiciones"/>Tengo una bici
+        <input type="checkbox" name="condiciones"/>Tengo un coche
+        <input type="checkbox" name="condiciones"/>Tengo un barco
+    </p>
+    <li>
+        ¿Jugamos?
+        <select name="Jugamos" >
+            <option>Piedra</option>
+            <option>Papel</option>
+            <option>Tijeras</option>
+        </select>
+    </li>
+    <li>
+        Introduce tu sexo: 
+        <input type="radio" name="sexo" value="h"/>Hombre <input type="radio" name="sexo" value="m"/>Mujer
+    </li>
+    <li>
+        <p>
+            <input type="submit" value="Submit"/>
+        </p>
+    </li>
+</ul>
+<hr>
+<h1><center>Formulario 2</center></h1>
+<h1>
+    Formulario WEB basico
+</h1>
+<hr>
+<fieldset>
+    <legend>Informacion del usuario</legend>
+    <form>
+        <p>
+            Nombre: <input type="text" name="nombre" maxlength="50" placeholder="Nombre de usuario..."/>
+        </p>
+        <p>
+            Direcciones e-mail: <input type="text" name="email" maxlength="50"/>
+        </p>
+        <p>
+            <label>Ciudad:</label> 
+            <select name="ciudad" aria-placeholder="">
+                <option selected>Selecciona ciudad...</option>
+                <option>Mexico</option>
+                <option>USA</option>
+                <option>Canada</option>
+                <option>Costa Rica</option>
+                <option>Peru</option>
+            </select>
+        </p>
+        <p>
+            Aficiones:<br>
+            <input type="checkbox" name="Aficiones"/>Deportes<br>
+            <input type="checkbox" name="Aficiones"/>Coches<br>
+            <input type="checkbox" name="Aficiones"/>Musica
+        </p>
+        </form>
+</fieldset>
+
+<hr>
+<h1><center>Formulario 3</center></h1>
+<fieldset>
+    <legend>Agrupacion de varios controles:</legend>
+    <p>
+        Campo de texto:<br>
+        <input type="text" name="tipo_de_dato"/>
+    </p>
+    <p>
+        Lista de seleccion:<br>
+        <input type="checkbox" name="Opcs"/>Opcion 1<br>
+        <input type="checkbox" name="Opcs"/>Opcion 1<br>
+        <input type="checkbox" name="Opcs"/>Opcion 1
+    </p>
+    <p>
+        Area de texto:<br>
+        <textarea name="comentario" rows="7" cols="50" placeholder="En este control del formulario se pueden escribir varias lineas de texto."></textarea>
+    </p> 
+</fieldset>
+<fieldset>
+    <legend>Agrupacion de botones:</legend>
+    <p>
+        <input type="submit" value="Enviar"/>
+        <input type="reset" value="Borrar datos"/>
+    </p>
+</fieldset>
+
+<h1>Formulario de registro</h1>
+<hr>
+<form action="" method="get"><!--Etiqueta de inicio-->
+<p>
+    Nombre: <input type="text" name="nombre" maxlength="50"/>
+</p>
+<p>
+    Apellidos: <input type="text" name="apellidos" maxlength="50"/>
+</p>
+<p>
+    Sexo: <input type="radio" name="sexo" value="h"/>hombre <input type="radio" name="sexo" value="m"/>mujer
+</p>
+<p>
+    Correo: <input type="text" name="correo" maxlength="100"/>
+</p>
+<p>
+    <input type="checkbox" name="info" checked="checked"/>Deseo recibir informacion sobre novedades y ofertas
+</p> 
+<p>
+    <input type="checkbox" name="condiciones"/>Declaro haber leido y aceptar las condiciones generales del programa
+</p>
+<select name="colorPreferido" multiple size="4">
+    <option>Rojo</option>
+    <option>Verde</option>
+    <option>Amarillo</option>
+    <option>Rosa</option>
+    <option>Naranja</option>
+</select>
+<p>
+    <textarea name="comentario" rows="7" cols="50" placeholder="Comentarios"></textarea>
+</p> 
+<p>
+    <input type="submit" value="Enviar"/>
+</p>
+<p>
+    <input type="reset" value="Borrar datos"/>
+</p>
+</form>
+
+</body>
+</html>

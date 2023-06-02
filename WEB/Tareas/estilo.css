@@ -1,0 +1,13 @@
+/*Estilo generales de la pagina web*/
+body{
+    /*background-image:url("./img/anime.png");*/
+    background-color: rgb(95, 92, 92);
+}
+p{
+    margin:20px;
+    color:blue;
+    padding: 15px;
+    border: 15px solid;
+    text-align: center;
+    background-color: rgb(173, 130, 50,0.5);
+}

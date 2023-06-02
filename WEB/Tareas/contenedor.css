@@ -1,0 +1,51 @@
+.cabecera{
+    background: gray;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0.5%;
+    border: 0%;
+    padding: 0.5%;
+    width: 98%;
+    height: 65px;
+    align-content: center;
+}
+.navegacion{
+    background: gray;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0.5%;
+    border: 0%;
+    padding: 0.5%;
+    width: 98%;
+    height: 45px;
+}
+.principal{
+    background: gray;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0.5%;
+    border: 0%;
+    padding: 0.5%;
+    width: 65%;
+    height: 400px;
+}
+.barra_lateral{
+    background: gray;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0.5%;
+    border: 0%;
+    padding: 0.5%;
+    width: 31%;
+    height: 400px;
+}
+.institucional{
+    background: gray;
+    color: black;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    margin: 0.5%;
+    border: 0%;
+    padding: 0.5%;
+    width: 98%;
+    height: 110px;    
+}
